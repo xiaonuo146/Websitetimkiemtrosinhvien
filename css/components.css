@@ -1,0 +1,252 @@
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 20px; /* Bo góc tròn hẳn theo mẫu */
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn--landlord {
+  background-color: #ebf3ff;
+  color: var(--mau-chu-dao);
+}
+
+.btn--landlord:hover {
+  background-color: #d6e7ff;
+}
+
+.btn--login {
+  background-color: var(--mau-chu-dao);
+  color: var(--nen-trang);
+}
+
+.btn--login:hover {
+  background-color: var(--mau-chu-dao-hover);
+}
+
+/* Nút tìm trọ dải màu Gradient */
+.btn--tim {
+  background: var(--chuyen-sac-nut);
+  color: var(--nen-trang);
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 15px;
+}
+
+/* Feature Cards */
+.the-tinh-nang {
+  background-color: var(--nen-trang);
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--mau-vien);
+  text-align: center;
+}
+
+.icon-tinh-nang {
+  font-size: 28px;
+  color: var(--mau-chu-dao);
+  margin-bottom: 15px;
+}
+
+.tieude-tinh-nang {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mota-tinh-nang {
+  font-size: 14px;
+  color: var(--mau-chu-phu);
+}
+
+/* Action Cards */
+.the-hanh-dong {
+  background-color: var(--nen-trang);
+  border-radius: 12px;
+  padding: 30px;
+  text-decoration: none;
+  color: var(--mau-chu-text);
+  border: 1px solid var(--mau-vien);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.the-hanh-dong:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.icon-hanh-dong {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.icon-hanh-dong--xanh {
+  background-color: #ebf3ff;
+  color: var(--mau-chu-dao);
+}
+
+.icon-hanh-dong--luc {
+  background-color: #e6f9ed;
+  color: var(--mau-xanh-la);
+}
+
+.noidung-hanh-dong h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.noidung-hanh-dong p {
+  font-size: 14px;
+  color: var(--mau-chu-phu);
+}
+
+.mui-ten {
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+/* ==================== CARD PHÒNG TRỌ ĐÚNG MẪU 100% ==================== */
+.card-phong {
+  background-color: var(--nen-trang);
+  border: 1px solid var(--mau-vien);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.card-phong__khung-anh {
+  position: relative;
+  height: 200px;
+  background-color: #e2e8f0;
+}
+
+.card-phong__anh-nen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-phong__nhan {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #00c853;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.card-phong__yeu-thich {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: #a0aec0;
+}
+
+.card-phong__yeu-thich:hover {
+  color: #e53e3e;
+}
+
+.card-phong__noi-dung {
+  padding: 20px;
+}
+
+.card-phong__dong-dau {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.card-phong__tieu-de {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mau-chu-text);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-phong__danh-gia {
+  color: #f59e0b;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.card-phong__dia-chi {
+  font-size: 13px;
+  color: var(--mau-chu-phu);
+  margin-bottom: 12px;
+}
+
+.card-phong__thông-so {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: var(--mau-chu-phu);
+  margin-bottom: 15px;
+}
+
+.card-phong__vach-ngan {
+  border: none;
+  border-top: 1px solid #edf2f7;
+  margin-bottom: 15px;
+}
+
+.card-phong__dong-gia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.card-phong__nhan-gia {
+  font-size: 13px;
+  color: var(--mau-chu-phu);
+}
+
+.card-phong__so-tien {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--mau-chu-dao);
+}
+
+.card-phong__uoc-tinh {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--mau-chu-phu);
+}

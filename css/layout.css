@@ -1,0 +1,82 @@
+.khung-chua {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+.dau-trang {
+  background-color: var(--nen-trang);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid var(--mau-vien);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.thanh-dieu-huong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.thanh-dieu-huong .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--mau-chu-dao);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--mau-chu-text);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.menu__link:hover {
+  color: var(--mau-chu-dao);
+}
+
+/* Tab đang hoạt động giống ảnh mẫu (màu xanh dương nhạt) */
+.menu__link.active {
+  background-color: #ebf3ff;
+  color: var(--mau-chu-dao);
+}
+
+.hanh-dong {
+  display: flex;
+  gap: 12px;
+}
+
+.nut-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Footer */
+.chan-trang {
+  background-color: #1e293b;
+  color: #94a3b8;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
