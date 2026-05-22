@@ -595,3 +595,109 @@
   padding: 14px;
   font-size: 16px;
 }
+/* ==================== KHUNG THẺ ĐĂNG TIN TRẮNG TOÀN DIỆN (ĐÃ KHẮC PHỤC LỖI) ==================== */
+
+/* Khung màu trắng bo góc đổ bóng bao bọc toàn bộ form nhập liệu */
+.form-dang-tin {
+  background-color: var(--nen-trang);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--mau-vien);
+  margin-top: 20px;
+}
+
+/* Phần đầu tiêu đề của từng phân khu nhập liệu */
+.dau-khung-nhap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1.5px dashed var(--mau-vien);
+  padding-bottom: 20px;
+}
+
+/* Khối hình vuông màu xanh chứa biểu tượng Emoji */
+.emoji-khoi {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: #ebf3ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.dau-khung-nhap h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--mau-chu-text);
+}
+
+.dau-khung-nhap p {
+  font-size: 13px;
+  color: var(--mau-chu-phu);
+  margin-top: 2px;
+}
+
+/* Phân chia khoảng cách giữa các nhóm trường */
+.nhom-truong {
+  margin-bottom: 20px;
+}
+
+.nhan-form {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+/* Hệ thống hiển thị 2 cột song song (Diện tích - Loại phòng / Giá thuê - Tiền cọc) */
+.hai-cot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Khu vực nút gửi Đăng tin ở cuối khung */
+.nhom-nut-gui {
+  margin-top: 40px;
+  border-top: 1px solid #edf2f7;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.nhom-nut-gui .btn {
+  width: 100%;
+  max-width: 320px;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 30px;
+}
+/* iu thich */
+/* ==================== TRANG YÊU THÍCH ==================== */
+
+.trang-yeu-thich {
+  padding: 40px 0;
+  min-height: 60vh;
+}
+
+.yeu-thich__tieu-de {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.yeu-thich__so-luong {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.yeu-thich__luoi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}

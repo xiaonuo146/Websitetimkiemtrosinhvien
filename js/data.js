@@ -1,9 +1,9 @@
-// Khởi tạo mảng người dùng rỗng (chỉ lưu dữ liệu khi người dùng đăng ký thực tế)
+// Nội dung sạch duy nhất của file js/data.js:
+
 if (!localStorage.getItem("users")) {
   localStorage.setItem("users", JSON.stringify([]));
 }
 
-// Danh sách phòng trọ mẫu quanh ĐH Tây Nguyên để hiển thị lên trang chủ
 const duLieuPhongTroMau = [
   {
     id: 101,
@@ -52,7 +52,6 @@ const duLieuPhongTroMau = [
   }
 ];
 
-// Nạp phòng trọ mẫu vào localStorage nếu chưa có
 if (!localStorage.getItem("rooms")) {
   localStorage.setItem("rooms", JSON.stringify(duLieuPhongTroMau));
 }
