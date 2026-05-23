@@ -569,7 +569,7 @@
   flex-direction: column;
   gap: 25px;
 }
-/* ==================== FORM ĐĂNG TIN ĐƠN GỘP CHUẨN MẪU ==================== */
+/* ==================== FORM ĐĂNG TIN ==================== */
 .phan-nhap-lieu {
   border-bottom: 1.5px dashed var(--mau-vien);
   padding-bottom: 25px;
@@ -601,7 +601,7 @@
 .form-dang-tin {
   background-color: var(--nen-trang);
   border-radius: 12px;
-  padding: 40px;
+  padding: 50px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
   border: 1px solid var(--mau-vien);
   margin-top: 20px;
@@ -676,28 +676,4 @@
   padding: 14px;
   font-size: 16px;
   border-radius: 30px;
-}
-/* iu thich */
-/* ==================== TRANG YÊU THÍCH ==================== */
-
-.trang-yeu-thich {
-  padding: 40px 0;
-  min-height: 60vh;
-}
-
-.yeu-thich__tieu-de {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.yeu-thich__so-luong {
-  color: #6b7280;
-  margin-bottom: 24px;
-}
-
-.yeu-thich__luoi {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
 }

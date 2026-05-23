@@ -131,7 +131,7 @@ $(document).ready(function() {
   }
 
 
-  // ==================== KHU VỰC 4: XỬ LÝ TRANG ĐĂNG TIN ĐƠN GỘP CHUẨN XÁC (MỚI) ====================
+  // ==================== KHU VỰC 4: XỬ LÝ TRANG ĐĂNG TIN ====================
   if ($('#form-dang-tin').length > 0) {
     
     // Kiểm tra quyền chủ trọ
@@ -214,7 +214,7 @@ $(document).ready(function() {
 
 
   // =========================================================================
-  // KHU VỰC 5: XỬ LÝ ĐĂNG NHẬP & ĐĂNG KÝ (dang-nhap.html) (ĐÃ KHẮC PHỤC TRIỆT ĐỂ LỖI ĐĂNG KÝ)
+  // KHU VỰC 5: XỬ LÝ ĐĂNG NHẬP & ĐĂNG KÝ (dang-nhap.html) 
   // =========================================================================
   if ($('#khung-dang-nhap').length > 0) {
     
@@ -357,48 +357,49 @@ $(document).ready(function() {
     $('#so-luong-phong').text(`Tìm thấy ${danhSachSauLoc.length} phòng trọ`);
   }
 
-  function hienThiDanhSachPhong(danhSach, idTheChua) {
-    const theChua = $(idTheChua);
-    theChua.empty();
+  // Thay đổi phương thức hienThiDanhSachPhong trong file js/main.js để xử lý ảnh hiển thị chuyên nghiệp hơn
+function hienThiDanhSachPhong(danhSach, idTheChua) {
+  const theChua = $(idTheChua);
+  theChua.empty();
 
-    if (danhSach.length === 0) {
-      theChua.html('<p class="thong-bao-trong">Không tìm thấy phòng trọ nào phù hợp.</p>');
-      return;
-    }
-
-    danhSach.forEach(phong => {
-      const khungAnhHTML = phong.image 
-        ? `<img src="${phong.image}" class="card-phong__anh-that">`
-        : `<div class="room-image-placeholder">Ảnh phòng trọ mẫu</div>`;
-
-      const thePhongHTML = `
-        <a href="chi-tiet.html?id=${phong.id}" class="card-phong">
-          <div class="card-phong__khung-anh">
-            <div class="card-phong__nhan">${phong.tag}</div>
-            ${khungAnhHTML}
-          </div>
-          <div class="card-phong__noi-dung">
-            <div class="card-phong__dong-dau">
-              <h3 class="card-phong__tieu-de">${phong.title}</h3>
-              <span class="card-phong__danh-gia">★ ${phong.rating}</span>
-            </div>
-            <p class="card-phong__dia-chi">📍 ${phong.address}</p>
-            <div class="card-phong__thong-so">
-              <span>📐 ${phong.area} m²</span>
-              <span>🚪 Phòng đơn</span>
-            </div>
-            <hr class="card-phong__vach-ngan">
-            <div class="card-phong__dong-gia">
-              <span class="card-phong__nhan-gia">Giá thuê:</span>
-              <strong class="card-phong__gia">${phong.price.toLocaleString()}đ</strong>
-            </div>
-          </div>
-        </a>
-      `;
-      theChua.append(thePhongHTML);
-    });
+  if (danhSach.length === 0) {
+    theChua.html('<p class="thong-bao-trong">Không tìm thấy phòng trọ nào phù hợp.</p>');
+    return;
   }
 
+  danhSach.forEach(phong => {
+    // Nếu là link ảnh mockup từ Unsplash hoặc ảnh base64 do người dùng tải lên
+    const khungAnhHTML = phong.image 
+      ? `<img src="${phong.image}" class="card-phong__anh-that" style="width:100%; height:100%; object-fit:cover;">`
+      : `<div class="room-image-placeholder">Ảnh phòng trọ mẫu</div>`;
+
+    const thePhongHTML = `
+      <a href="chi-tiet.html?id=${phong.id}" class="card-phong">
+        <div class="card-phong__khung-anh" style="position:relative; height:190px; background-color:#cbd5e1; overflow:hidden;">
+          <div class="card-phong__nhan">${phong.tag}</div>
+          ${khungAnhHTML}
+        </div>
+        <div class="card-phong__noi-dung">
+          <div class="card-phong__dong-dau">
+            <h3 class="card-phong__tieu-de">${phong.title}</h3>
+            <span class="card-phong__danh-gia">★ ${phong.rating}</span>
+          </div>
+          <p class="card-phong__dia-chi">📍 ${phong.address}</p>
+          <div class="card-phong__thong-so">
+            <span>📐 ${phong.area} m²</span>
+            <span>🚪 Phòng trọ</span>
+          </div>
+          <hr class="card-phong__vach-ngan">
+          <div class="card-phong__dong-gia">
+            <span class="card-phong__nhan-gia">Giá thuê:</span>
+            <strong class="card-phong__gia">${phong.price.toLocaleString()}đ</strong>
+          </div>
+        </div>
+      </a>
+    `;
+    theChua.append(thePhongHTML);
+  });
+}
 
   // ==================== KHU VỰC 7: XỬ LÝ TRANG CHI TIẾT PHÒNG TRỌ (chi-tiet.html) ====================
   if ($('#chi-tiet-trang').length > 0) {
