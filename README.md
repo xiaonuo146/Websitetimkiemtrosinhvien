@@ -90,7 +90,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
 
 ## Lưu ý
 
-- Website hoàn toàn responsive (desktop + mobile)
+- Website hoàn toàn responsive (desktop )
 - Sử dụng CDN cho jQuery, Font Awesome, Leaflet
 - LocalStorage để lưu phòng
 - Không cần build tool hay framework phức tạp
