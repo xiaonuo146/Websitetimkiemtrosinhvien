@@ -181,7 +181,7 @@ input[type="file"].input-text {
   gap: 25px;
 }
 
-/* Card phòng trọ & thẻ phòng chọn (gom chung) */
+/* Card phòng trọ & thẻ phòng chọn */
 .card-phong,
 .the-phong-chon {
   background-color: var(--nen-trang);

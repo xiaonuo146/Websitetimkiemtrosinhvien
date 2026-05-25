@@ -85,17 +85,18 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
-.tieu-de-vung {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 30px;
-}
 .tieu-de-vung .tieu-de-phan {
-  text-align: left;
   margin-bottom: 0;
 }
+.tieu-de-vung {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
 .xem-tat-ca {
+  margin-left: auto;
   text-decoration: none;
   color: var(--mau-chu-dao);
   font-weight: 700;
@@ -160,22 +161,26 @@
   margin-bottom: 24px;
 }
 .nhan-loc {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #475569;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.nhom-hop-kiem {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.nhan-hop-kiem {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.nhom-hop-kiem {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nhan-hop-kiem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
   font-weight: 500;
   color: var(--mau-chu-text);
@@ -185,6 +190,7 @@
   width: 16px;
   height: 16px;
   cursor: pointer;
+   align-items: left;
 }
 .noi-dung-ket-qua {
   flex: 1;
